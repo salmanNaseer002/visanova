@@ -15,7 +15,7 @@ export default function HIPAACompliance() {
           transition={{ duration: 0.6 }}
           className="text-5xl font-bold mb-8 text-green-700 text-center"
         >
-          HIPAA Compliance
+          HIPA Compliance
         </motion.h1>
 
         <p className="text-lg text-slate-700 text-center max-w-3xl mx-auto leading-relaxed">
