@@ -20,12 +20,19 @@ const quickLinks = [
   { label: "Contact Us", href: "/contact" },
 ];
 
+const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-of-service" },
+  { label: "Refund Policy", href: "/refund-policy" },
+  { label: "Disclaimer", href: "/disclaimer" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#060F1E] text-gray-300">
       {/* Main footer grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-5 hover:opacity-85 transition-opacity">
@@ -130,6 +137,26 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Legal */}
+          <div>
+            <h3 className="text-white font-semibold text-base mb-5 pb-2 border-b border-[#C9A027]/30">
+              Legal
+            </h3>
+            <ul className="space-y-2.5">
+              {legalLinks.map((l) => (
+                <li key={l.label}>
+                  <Link
+                    href={l.href}
+                    className="text-sm text-gray-400 hover:text-[#C9A027] transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-[#C9A027]/50 group-hover:bg-[#C9A027] transition-colors" />
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <h3 className="text-white font-semibold text-base mb-5 pb-2 border-b border-[#C9A027]/30">
@@ -176,13 +203,12 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-gray-500">
           <p>© {new Date().getFullYear()} Visanova Ltd. All rights reserved. Registered in England &amp; Wales.</p>
-          <div className="flex items-center gap-4">
-            <Link href="/privacy-policy" className="hover:text-[#C9A027] transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms-of-service" className="hover:text-[#C9A027] transition-colors">
-              Terms of Service
-            </Link>
+          <div className="flex flex-wrap items-center gap-4">
+            {legalLinks.map((l) => (
+              <Link key={l.href} href={l.href} className="hover:text-[#C9A027] transition-colors">
+                {l.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

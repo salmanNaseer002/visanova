@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Hero from "@/components/visanova/home/Hero";
 import ServicesOverview from "@/components/visanova/home/ServicesOverview";
 import WhyChooseUs from "@/components/visanova/home/WhyChooseUs";
-import VisaProcess from "@/components/visanova/home/VisaProcess";
 import StatsSection from "@/components/visanova/home/StatsSection";
+import VisaProcess from "@/components/visanova/home/VisaProcess";
+import TeamSection from "@/components/visanova/home/TeamSection";
 import HomeTestimonials from "@/components/visanova/home/HomeTestimonials";
 import FAQ from "@/components/visanova/home/FAQ";
 import CTABanner from "@/components/visanova/home/CTABanner";
@@ -22,6 +23,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <StatsSection />
       <VisaProcess />
+      <TeamSection />
       <HomeTestimonials />
       <FAQ />
       <CTABanner />
