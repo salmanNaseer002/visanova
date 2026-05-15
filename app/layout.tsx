@@ -62,8 +62,9 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   icons: {
-    icon: [{ url: "/favicon.ico" }],
-    shortcut: [{ url: "/favicon.ico" }],
+    icon: [{ url: "/Visa Nova-logo-01.png", type: "image/png" }],
+    shortcut: [{ url: "/Visa Nova-logo-01.png", type: "image/png" }],
+    apple: [{ url: "/Visa Nova-logo-01.png", type: "image/png" }],
   },
   robots: {
     index: true,
